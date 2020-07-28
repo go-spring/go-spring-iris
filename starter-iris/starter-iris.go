@@ -31,7 +31,7 @@ import (
 func init() {
 	SpringBoot.RegisterNameBeanFn("iris-app-starter", func(config IrisServerConfig) *IrisAppStarter {
 		return &IrisAppStarter{app: iris.New(), cfg: config}
-	}).AsInterface((*SpringBoot.ApplicationEvent)(nil))
+	})
 }
 
 // IrisServerConfig Iris 服务器配置
@@ -46,6 +46,8 @@ type IrisServerConfig struct {
 
 // IrisAppStarter
 type IrisAppStarter struct {
+	_ SpringBoot.ApplicationEvent `export:""`
+
 	app *iris.Application
 	cfg IrisServerConfig
 }
@@ -57,7 +59,7 @@ func (starter *IrisAppStarter) OnStartApplication(ctx SpringBoot.ApplicationCont
 			filters := mapping.Filters()
 			for _, s := range mapping.FilterNames() {
 				var f SpringWeb.Filter
-				ctx.GetBeanByName(s, &f)
+				ctx.GetBean(&f, s)
 				filters = append(filters, f)
 			}
 			for _, method := range SpringWeb.GetMethod(mapping.Method()) {
