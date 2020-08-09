@@ -20,11 +20,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/go-spring/go-spring-iris/spring-iris"
-	"github.com/go-spring/go-spring-parent/spring-logger"
-	"github.com/go-spring/go-spring-parent/spring-utils"
-	"github.com/go-spring/go-spring-web/spring-web"
-	"github.com/go-spring/go-spring/spring-boot"
+	"github.com/go-spring/spring-boot"
+	"github.com/go-spring/spring-iris/spring-iris"
+	"github.com/go-spring/spring-logger"
+	"github.com/go-spring/spring-utils"
+	"github.com/go-spring/spring-web"
 	"github.com/kataras/iris/v12"
 )
 

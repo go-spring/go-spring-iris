@@ -17,9 +17,9 @@
 package main
 
 import (
-	_ "github.com/go-spring/go-spring-iris/example"
-	_ "github.com/go-spring/go-spring-iris/starter-iris"
-	"github.com/go-spring/go-spring/spring-boot"
+	"github.com/go-spring/spring-boot"
+	_ "github.com/go-spring/spring-iris/example"
+	_ "github.com/go-spring/spring-iris/starter-iris"
 )
 
 func main() {

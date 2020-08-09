@@ -17,8 +17,8 @@
 package example
 
 import (
-	"github.com/go-spring/go-spring-iris/spring-iris"
-	"github.com/go-spring/go-spring/spring-boot"
+	"github.com/go-spring/spring-boot"
+	"github.com/go-spring/spring-iris/spring-iris"
 	"github.com/kataras/iris/v12"
 )
 

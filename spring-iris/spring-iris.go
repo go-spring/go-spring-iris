@@ -19,8 +19,8 @@ package SpringIris
 import (
 	"fmt"
 
-	"github.com/go-spring/go-spring-web/spring-web"
-	"github.com/go-spring/go-spring/spring-core"
+	"github.com/go-spring/spring-core"
+	"github.com/go-spring/spring-web"
 	"github.com/kataras/iris/v12"
 )
 
